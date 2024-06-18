@@ -1,0 +1,14 @@
+global:
+  postgresql:
+    auth:
+      username: gerson
+      database: airflow
+      existingSecret: postgres-secrets
+      secretKeys:
+        adminPasswordKey: postgres-password
+        userPasswordKey: password
+        replicationPasswordKey: replication-password
+
+primary:
+  service:
+    type: LoadBalancer

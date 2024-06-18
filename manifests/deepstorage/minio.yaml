@@ -1,0 +1,22 @@
+mode: standalone
+
+existingSecret: minio-secrets
+
+replicas: 1
+
+persistence:
+  size: 10Gi
+
+service:
+  type: LoadBalancer
+
+consoleService:
+  type: LoadBalancer
+
+resources:
+  requests:
+    memory: 512Mi
+
+buckets:
+  - name: landing
+  - name: lakehouse

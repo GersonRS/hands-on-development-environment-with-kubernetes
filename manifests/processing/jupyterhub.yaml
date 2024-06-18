@@ -1,0 +1,16 @@
+singleuser:
+  image:
+    name: "quay.io/jupyter/all-spark-notebook"
+    tag: "latest"
+
+  extraEnv:
+    AWS_ENDPOINT: "http://minio.deepstorage.svc.cluster.local:9000"
+    AWS_ACCESS_KEY_ID: "gerson"
+    AWS_SECRET_ACCESS_KEY: "rHasMuUFzGY0REI2H6RcdaJFNZp9b9ht"
+    AWS_REGION: "eu-west-1"
+    AWS_ALLOW_HTTP: "true"
+    AWS_S3_ALLOW_UNSAFE_RENAME: "true"
+
+proxy:
+  service:
+    type: LoadBalancer
